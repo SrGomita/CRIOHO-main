@@ -8,7 +8,7 @@ import handlebars from 'vite-plugin-handlebars';
 export default defineConfig(
     {
         appType: "mpa",
-        base: "/CRIOHO/",
+        base: "https://srgomita.github.io/CRIOHO-main",
         build: {
             rollupOptions: {
                 input: Object.fromEntries(
