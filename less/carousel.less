@@ -1,0 +1,126 @@
+@primary-color: #2c5282;
+@secondary-color: #4299e1;
+@text-color: #2d3748;
+@light-bg: #f7fafc;
+@dark-bg: #1a202c;
+@success-color: #48bb78;
+@error-color: #f56565;
+
+.slider {
+    position: relative;
+    overflow: hidden;
+    height: 90vh;
+
+    .frametrack {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        display: flex;
+        flex-direction: row;
+        transition: left 0.5s ease-in-out;
+
+        .slide {
+            position: relative;
+            width: 100vw;
+            height: 90vh;
+
+            img {
+                display: block;
+                width: 100vw;
+                height: 90vh;
+                object-fit: cover;
+                object-position: center center;
+            }
+
+            div {
+                position: absolute;
+                padding: 2rem;
+                max-width: 380px;
+                background-color: rgba(255, 255, 255, 0.8);
+                border-radius: 13px;
+                bottom: 10%;
+                left: 10%;
+
+                h2 {
+                    font-size: 2rem;
+                    color: @primary-color;
+                }
+
+                p{
+                    margin-bottom: 20px;
+                }
+
+                a {
+                    padding: 1rem;
+                    background: @primary-color;
+                    font-weight: 700;
+                    font-size: 1rem;
+                    color: white;
+                    border: none;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    text-decoration: none;
+                    
+
+                    &:hover {
+                        background: @secondary-color;
+                        color: @primary-color;
+                    }
+                }
+
+                &::before {
+                    content: '';
+                    width: 380px;
+                    height: 380px;
+                    transform: translate(-50%, -50%);
+                    background-image: radial-gradient(circle, #0000 45%, #000f 48%);
+                }
+            }
+        }
+    }
+
+    .navigation-btn {
+        position: absolute;
+        top: 50%;
+        left: 0px;
+        z-index: 1000;
+        padding: 1.5rem 0.8rem;
+        font-size: 2rem;
+        color: #2c5282;
+        transform: translateY(-50%);
+        height: 100%;
+        align-items: center;
+        display: flex;
+        cursor: pointer;
+    }
+
+    .navigate-right {
+        left: auto;
+        right: 0px;
+    }
+
+    .navigation-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        width: 100vw;
+        padding: 0.5rem;
+    }
+
+    .navigation-index {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #fff;
+        cursor: pointer;
+
+        &.active {
+            background-color: @secondary-color;
+        }
+    }
+
+}

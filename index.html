@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRIOHO - Centro de Rehabilitación Integral</title>
+    <link rel="icon" type="imge/x-icon" href="resources/img/Logo.png">
+    <link rel="stylesheet" href="less/main.less" />
+  </head>
+  <body>
+    {{> header }}
+    
+    <main class="home">
+      {{>carousel}}
+      <section class="features">
+        <div class="feature">
+          <img src="resources/img/fisica.jpg" alt="Terapia física">
+          <h3>Terapia Física</h3>
+          <p>Rehabilitación personalizada para recuperar tu movilidad</p>
+        </div>
+        <div class="feature">
+          <img src="resources/img/Holístico.jpg" alt="Enfoque holístico">
+          <h3>Enfoque Holístico</h3>
+          <p>Tratamiento integral para cuerpo y mente</p>
+        </div>
+        <div class="feature">
+          <img src="resources/img/especialista.jpeg" alt="Especialistas">
+          <h3>Especialistas Certificados</h3>
+          <p>Equipo profesional altamente calificado</p>
+        </div>
+      </section>
+    </main>
+
+    {{> footer }}
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>

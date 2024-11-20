@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacto - CRIOHO</title>
+    <link rel="stylesheet" href="less/main.less" />
+  </head>
+  <body>
+    {{> header }}
+    
+    <main class="contact animate-fadeIn">
+      <h1 class="page-title">Contáctanos</h1>
+
+      <div class="contact-container">
+        <div class="contact-info">
+          <div class="info-card">
+            <h3>📍 Ubicación</h3>
+            <p>MQ9F+WJW, 2da Calle, Juticalpa, Olancho</p>
+          </div>
+          <div class="info-card">
+            <h3>📞 Teléfonos</h3>
+            <p>2785-3688</p>
+          </div>
+          <div class="info-card">
+            <h3>✉️ Email</h3>
+            <p>criolancho@yahoo.com.</p>
+          </div>
+          <div class="info-card">
+            <h3>🕒 Horario</h3>
+            <p>Lunes a Viernes: 08:00 - 17:00</p>
+          </div>
+        
+        </div>
+        <form class="contact-form animate-slideIn" id="contactForm">
+          <div class="form-group">
+            <label for="name">Nombre Completo</label>
+            <input 
+              type="text" 
+              id="name" 
+              placeholder="Solo letras, mínimo 5 caracteres" 
+              required>
+          </div>
+          <div class="form-group">
+            <label for="email">Correo Electrónico</label>
+            <input 
+              type="email" 
+              id="email" 
+              placeholder="ejemplo@dominio.com" 
+              required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Teléfono</label>
+            <input 
+              type="text" 
+              id="phone" 
+              placeholder="8 dígitos" 
+              maxlength="8" 
+              required>
+          </div>
+          <div class="form-group">
+            <label for="service">Servicio de Interés</label>
+            <select id="service" required>
+              <option value="">Seleccione un servicio</option>
+              <option value="fisioterapia">Fisioterapia</option>
+              <option value="hidroterapia">Hidroterapia</option>
+              <option value="terapia-ocupacional">Terapia Ocupacional</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Mensaje</label>
+            <textarea 
+              id="message" 
+              rows="5" 
+              minlength="10" 
+              placeholder="Tu mensaje debe tener al menos 10 caracteres" 
+              required>
+            </textarea>
+          </div>
+          <button type="submit" class="submit-btn">Enviar Mensaje</button>
+        </form>      
+      </div>
+
+      <div class="map-container">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3859.7543525223527!2d-86.22850602515479!3d14.669877275377347!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f6c1fb21abfd8fb%3A0x2865d7b8fe2d6606!2sCRIOHO!5e0!3m2!1ses-419!2shn!4v1731448302117!5m2!1ses-419!2shn"
+          width="100%" 
+          height="450" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy">
+        </iframe>
+      </div>
+    </main>
+
+    {{> footer }}
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>

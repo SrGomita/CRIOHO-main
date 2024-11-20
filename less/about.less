@@ -1,0 +1,45 @@
+// About Page
+.about-hero {
+  background: linear-gradient(rgba(44, 82, 130, 0.9), rgba(44, 82, 130, 0.9));
+              
+  padding: 4rem 15rem;
+  text-align: center;
+  color: white;
+}
+
+.mission-vision {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(180px, 1fr));
+  gap: 20rem;
+  padding: 4rem 15rem;
+  background: @light-bg;
+
+  .mission, .vision {
+    padding: 2rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+
+  }
+}
+
+.team-section {
+  padding: 4rem 2rem;
+  text-align: center;
+
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  .team-member {
+    img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+    }
+  }
+}

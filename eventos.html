@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eventos - CRIOHO</title>
+    <link rel="stylesheet" href="less/main.less" />
+  </head>
+  <body>
+    {{> header }}
+    
+    <main class="events animate-fadeIn">
+      <h1 class="page-title">Próximos Eventos</h1>
+
+      <div class="events-grid">
+        <div class="event-card animate-slideIn">
+          <div class="event-date">
+            <span class="day">15</span>
+            <span class="month">MAR</span>
+          </div>
+          <div class="event-content">
+            <h3>Taller de Ejercicios Terapéuticos</h3>
+            <p class="event-time">🕒 10:00 AM - 12:00 PM</p>
+            <p class="event-location">📍 Sala Principal CRIOHO</p>
+            <p class="event-description">Aprende ejercicios básicos para mantener tu movilidad y prevenir lesiones.</p>
+            <button class="register-btn">Registrarse</button>
+          </div>
+        </div>
+
+        <div class="event-card animate-slideIn">
+          <div class="event-date">
+            <span class="day">22</span>
+            <span class="month">MAR</span>
+          </div>
+          <div class="event-content">
+            <h3>Charla: Nutrición y Rehabilitación</h3>
+            <p class="event-time">🕒 5:00 PM - 7:00 PM</p>
+            <p class="event-location">📍 Auditorio CRIOHO</p>
+            <p class="event-description">Descubre cómo la alimentación influye en tu proceso de recuperación.</p>
+            <button class="register-btn">Registrarse</button>
+          </div>
+        </div>
+
+        <div class="event-card animate-slideIn">
+          <div class="event-date">
+            <span class="day">30</span>
+            <span class="month">MAR</span>
+          </div>
+          <div class="event-content">
+            <h3>Jornada de Evaluación Gratuita</h3>
+            <p class="event-time">🕒 9:00 AM - 4:00 PM</p>
+            <p class="event-location">📍 Consultorios CRIOHO</p>
+            <p class="event-description">Evaluaciones físicas gratuitas para la comunidad.</p>
+            <button class="register-btn">Reservar Turno</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    {{> footer }}
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>

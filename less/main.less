@@ -1,0 +1,308 @@
+// Import animations
+@import './animations.less';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+// Variables
+@primary-color: #2c5282;
+@secondary-color: #4299e1;
+@text-color: #2d3748;
+@light-bg: #f7fafc;
+@dark-bg: #1a202c;
+@success-color: #48bb78;
+@error-color: #f56565;
+
+// Base Styles
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.5;
+  color: @text-color;
+  background-color: @light-bg;
+}
+
+// Navigation
+.main-nav {
+  background: white;
+  padding: 10px 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+
+  .logo {
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 80px;
+      height: 80px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 900;
+      padding: 0px 10px;
+      letter-spacing: 5px;
+    }
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+
+    a {
+      color: @text-color;
+      text-decoration: none;
+      transition: color 0.3s ease;
+      font-weight: 900;
+
+      &:hover {
+        color: @secondary-color;
+      }
+    }
+  }
+
+  .hamburger {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: @primary-color;
+  }
+}
+
+/* Diseño responsivo */
+@media (max-width: 768px) {
+  .main-nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    display: none; /* Escondido por defecto */
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1rem 0;
+  }
+
+  .nav-links.show {
+    display: flex; /* Mostrar cuando se activa el menú */
+  }
+
+  .hamburger {
+    display: block; /* Mostrar el botón en pantallas pequeñas */
+    margin-top: 10px;
+    align-self: flex-end;
+  }
+}
+
+// Features Section
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 4rem 2rem;
+  background: white;
+
+  .feature {
+    text-align: center;
+    padding: 2rem;
+
+    img {
+      width: 210px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+    }
+
+    h3 {
+      color: @primary-color;
+      margin-bottom: 0.5rem;
+    }
+  }
+}
+
+// Footer
+footer {
+  background: @dark-bg;
+  color: white;
+  padding: 4rem 2rem 2rem;
+
+  .footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .footer-section {
+    h4 {
+      color: @secondary-color;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  .footer-bottom {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
+}
+
+@import './carousel.less';
+@import './services.less';
+@import './about.less';
+@import './sponsor.less';
+@import './events.less';
+@import './contact.less';
+
+
+
+
+
+
+
+
+
+
+
+// Enhanced Responsive Design
+@media (max-width: 768px) {
+  .main-nav {
+    .nav-links {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: white;
+      flex-direction: column;
+      padding: 1rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+
+      &.active {
+        display: flex;
+      }
+    }
+
+    .hamburger {
+      display: block;
+    }
+  }
+
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+
+  .event-card {
+    grid-template-columns: 1fr !important;
+
+    .event-date {
+      padding: 0.5rem !important;
+    }
+    .register-btn{
+      width: 100%;
+    }
+  }
+
+  .donation-options {
+    .amount-options {
+      grid-template-columns: 1fr !important;
+    }
+  }
+
+  .team-section {
+    .team-grid {
+      grid-template-columns: 1fr !important;
+    }
+  }
+}
+
+// Utility Classes
+.page-title {
+  text-align: center;
+  padding: 2rem;
+  color: @primary-color;
+  font-size: 2.5rem;
+}
+
+//logo
+.logo {
+  padding: 0; 
+  margin-right: auto; 
+
+  img {
+    width: 80px;
+    height: 80px;
+    object-fit: fill;
+    border-radius: 20%;
+    margin: 0; 
+  }
+}
+
+
+//donations
+.donation-partners {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.donation-card {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  transition: transform 0.3s ease;
+  
+  &:hover {
+    transform: rotate(0deg) translateY(0) scale(1.02);
+  }
+}
+
+.donation-logo {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+.donation-info {
+  h3 {
+    margin: 0;
+    font-size: 1.25rem;
+    color: #333;
+  }
+  
+  p {
+    margin: 0.25rem 0 0;
+    color: #555;
+  }
+}

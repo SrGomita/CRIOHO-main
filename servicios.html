@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Servicios - CRIOHO</title>
+    <link rel="stylesheet" href="less/main.less" />
+  </head>
+  <body>
+    {{> header }}
+    
+    <main class="services animate-fadeIn">
+      <h1 class="page-title">Nuestros Servicios</h1>
+      
+      <div class="services-grid">
+        <div class="service-card">
+          <img src="resources/img/fisioterapia.jpg" alt="Fisioterapia">
+          <h3>Fisioterapia</h3>
+          <p>Tratamientos personalizados para recuperación física y motora.</p>
+          <ul>
+            <li>Terapia Manual</li>
+            <li>Ejercicios Terapéuticos</li>
+            <li>Rehabilitación Deportiva</li>
+          </ul>
+          <button class="cta-button">Agendar Cita</button>
+        </div>
+
+        <div class="service-card">
+          <img src="resources/img/hidroterapia.jpg" alt="Hidroterapia">
+          <h3>Hidroterapia</h3>
+          <p>Terapia acuática para rehabilitación y fortalecimiento.</p>
+          <ul>
+            <li>Ejercicios en Piscina</li>
+            <li>Watsu</li>
+            <li>Rehabilitación Acuática</li>
+          </ul>
+          <button class="cta-button">Agendar Cita</button>
+        </div>
+
+        <div class="service-card">
+          <img src="resources/img/terapia.jpg" alt="Terapia Ocupacional">
+          <h3>Terapia Ocupacional</h3>
+          <p>Recuperación de habilidades para la vida diaria.</p>
+          <ul>
+            <li>Entrenamiento ADL</li>
+            <li>Adaptaciones del Hogar</li>
+            <li>Rehabilitación Cognitiva</li>
+          </ul>
+          <button class="cta-button">Agendar Cita</button>
+        </div>
+      </div>
+    </main>
+
+    {{> footer }}
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>
